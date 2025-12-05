@@ -1,0 +1,104 @@
+# English translations for Calculator.
+# Copyright (C) 2025 Flask Calculator
+# This file is distributed under the same license as the Calculator
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Calculator 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-05 00:00+0000\n"
+"PO-Revision-Date: 2025-12-05 00:00+0000\n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.0\n"
+
+#: app/routes.py:78
+msgid "Invalid request format"
+msgstr "Invalid request format"
+
+#: app/routes.py:87
+msgid "Invalid operation"
+msgstr "Invalid operation"
+
+#: app/routes.py:99
+msgid "Invalid first operand"
+msgstr "Invalid first operand"
+
+#: app/routes.py:111
+msgid "Invalid second operand"
+msgstr "Invalid second operand"
+
+#: app/routes.py:135
+msgid "Division by zero is not allowed"
+msgstr "Division by zero is not allowed"
+
+#: app/routes.py:147
+msgid "Cannot calculate square root of negative number"
+msgstr "Cannot calculate square root of negative number"
+
+#: app/routes.py:155
+msgid "An unexpected error occurred"
+msgstr "An unexpected error occurred"
+
+#: app/routes.py:172
+msgid "Resource not found"
+msgstr "Resource not found"
+
+#: app/templates/index.html
+msgid "Calculator"
+msgstr "Calculator"
+
+#: app/templates/index.html
+msgid "Scientific Calculator"
+msgstr "Scientific Calculator"
+
+#: app/templates/index.html
+msgid "Enter number"
+msgstr "Enter number"
+
+#: app/templates/index.html
+msgid "Result"
+msgstr "Result"
+
+#: app/templates/index.html
+msgid "Add"
+msgstr "Add"
+
+#: app/templates/index.html
+msgid "Subtract"
+msgstr "Subtract"
+
+#: app/templates/index.html
+msgid "Multiply"
+msgstr "Multiply"
+
+#: app/templates/index.html
+msgid "Divide"
+msgstr "Divide"
+
+#: app/templates/index.html
+msgid "Square"
+msgstr "Square"
+
+#: app/templates/index.html
+msgid "Square Root"
+msgstr "Square Root"
+
+#: app/templates/index.html
+msgid "Clear"
+msgstr "Clear"
+
+#: app/templates/index.html
+msgid "Error"
+msgstr "Error"
+
+#: app/templates/index.html
+msgid "Second operand required"
+msgstr "Second operand required"

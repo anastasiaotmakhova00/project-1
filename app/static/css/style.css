@@ -1,0 +1,328 @@
+/* ====================================
+   Flask Calculator - Styles
+   ==================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+}
+
+.calculator {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.display-section {
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-field:last-child {
+    margin-bottom: 0;
+}
+
+.result-field {
+    background: #f0f0f0;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.buttons-section {
+    padding: 20px;
+}
+
+.operations-group {
+    margin-bottom: 25px;
+}
+
+.operations-group h3 {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.button-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-operation {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-operation:hover {
+    filter: brightness(1.1);
+}
+
+.btn-clear {
+    width: 100%;
+    background: #e74c3c;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-clear:hover {
+    background: #c0392b;
+}
+
+.operand2-section {
+    padding: 0 20px 20px;
+    margin-bottom: 10px;
+}
+
+.operand2-section.active {
+    display: block !important;
+}
+
+.control-group {
+    margin-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+}
+
+.error-message {
+    background: #ffe6e6;
+    color: #c0392b;
+    padding: 12px 15px;
+    margin: 15px 20px 0;
+    border-radius: 8px;
+    border-left: 4px solid #c0392b;
+    font-size: 14px;
+}
+
+.error-message.active {
+    display: block !important;
+}
+
+.history-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.history-section h3 {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.history-list {
+    list-style: none;
+}
+
+.history-list li {
+    padding: 8px 12px;
+    background: white;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 3px solid #667eea;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+    color: #333;
+    animation: slideIn 0.3s ease-out;
+}
+
+.history-list li:last-child {
+    margin-bottom: 0;
+}
+
+.history-list li span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.history-list li .operation {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.history-list li .result {
+    color: #27ae60;
+    font-weight: 600;
+    float: right;
+}
+
+/* ====================================
+   Responsive Design
+   ==================================== */
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .result-field {
+        font-size: 20px;
+    }
+
+    .button-row {
+        gap: 8px;
+    }
+}
+
+/* ====================================
+   Dark Mode (optional)
+   ==================================== */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+
+    .calculator {
+        background: #0f3460;
+        color: #e0e0e0;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    }
+
+    .display-section {
+        background: #1a1a2e;
+        border-bottom-color: #16213e;
+    }
+
+    .input-field {
+        background: #1a1a2e;
+        color: #e0e0e0;
+        border-color: #16213e;
+    }
+
+    .input-field:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    }
+
+    .result-field {
+        background: #16213e;
+        color: #667eea;
+    }
+
+    .buttons-section {
+        background: #0f3460;
+    }
+
+    .operations-group h3 {
+        color: #666;
+    }
+
+    .button-row {
+        gap: 10px;
+    }
+
+    .btn-operation {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .history-section {
+        background: #1a1a2e;
+        border-top-color: #16213e;
+    }
+
+    .history-list li {
+        background: #0f3460;
+        color: #e0e0e0;
+        border-left-color: #667eea;
+    }
+}

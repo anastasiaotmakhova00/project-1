@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ gettext('Calculator') }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="header">
+                <h1>{{ gettext('Scientific Calculator') }}</h1>
+            </div>
+
+            <div class="display-section">
+                <input type="text" id="operand1" class="input-field" placeholder="{{ gettext('Enter number') }}" />
+                <input type="text" id="result" class="input-field result-field" readonly placeholder="{{ gettext('Result') }}" />
+            </div>
+
+            <div class="buttons-section">
+                <!-- Binary Operations -->
+                <div class="operations-group">
+                    <h3>{{ gettext('Binary Operations') }}</h3>
+                    <div class="button-row">
+                        <button class="btn btn-operation" data-operation="add">
+                            {{ gettext('Add') }} (+)
+                        </button>
+                        <button class="btn btn-operation" data-operation="subtract">
+                            {{ gettext('Subtract') }} (−)
+                        </button>
+                    </div>
+                    <div class="button-row">
+                        <button class="btn btn-operation" data-operation="multiply">
+                            {{ gettext('Multiply') }} (×)
+                        </button>
+                        <button class="btn btn-operation" data-operation="divide">
+                            {{ gettext('Divide') }} (÷)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Input for Second Operand -->
+                <div class="operand2-section" style="display: none;">
+                    <input type="text" id="operand2" class="input-field" placeholder="{{ gettext('Second operand required') }}" />
+                </div>
+
+                <!-- Unary Operations -->
+                <div class="operations-group">
+                    <h3>{{ gettext('Unary Operations') }}</h3>
+                    <div class="button-row">
+                        <button class="btn btn-operation" data-operation="square">
+                            {{ gettext('Square') }} (x²)
+                        </button>
+                        <button class="btn btn-operation" data-operation="square_root">
+                            {{ gettext('Square Root') }} (√)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="control-group">
+                    <button class="btn btn-clear" id="clearBtn">
+                        {{ gettext('Clear') }}
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error Message Display -->
+            <div id="errorMessage" class="error-message" style="display: none;">
+                <span id="errorText"></span>
+            </div>
+
+            <!-- Calculation History -->
+            <div class="history-section">
+                <h3>{{ gettext('History') }}</h3>
+                <ul id="historyList" class="history-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+</body>
+</html>
